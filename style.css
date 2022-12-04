@@ -80,6 +80,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #e0d8c8;
+}
+
+img {
+    width: 2rem;
 }
 
 .container {
@@ -90,7 +95,7 @@ body {
     width: 50rem;
     height: 95vh;
     position: relative;
-    background-color: #eee;
+    background-color: #fce7bf;
     border-radius: 2rem;
     overflow: hidden;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -117,10 +122,10 @@ body {
 .bg {
     width: 40%;
     height: 100%;
-    background-color: #FF3CAC;
-    background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
     position: absolute;
     top: 0; left: 0;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
 }
 
 .bg button {
@@ -135,4 +140,64 @@ body {
     letter-spacing: .1rem;
     color: #fff;
     cursor: pointer;
+}
+
+.form {
+    width: 60rem;
+    height: 100%;
+    position: absolute;
+    top: 0; left: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5rem 0;
+}
+
+.form h1 {
+    font-size: 2.5rem;
+    color: rgb(204, 0, 255);
+}
+
+.form p {
+    font-size: 1.2rem;
+    margin-block: 1rem;
+    color: #555;
+}
+
+.form button {
+    width: 9rem;
+    height: 3rem;
+    background-color: #C850C0;
+    color: #fff;
+    border-radius: 100vmax;    
+    border: none;
+    margin-top: 1rem;
+}
+
+.socials {
+    display: flex;
+}
+
+.socials .social-icons {
+    margin-inline: 1rem;
+    width: 3rem;
+}
+
+.input-field {
+    position: relative;
+}
+
+.input-field input {
+    width: 18rem;
+    height: 3rem;
+    padding: 0 0 0 2.5rem;
+    border: none;
+    border-radius: 12px;
+}
+
+.input-field .input-icons {
+    position: absolute;
+    top: .5rem; left: .2rem;
+    width: 1.8rem;
 }
