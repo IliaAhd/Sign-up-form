@@ -83,12 +83,33 @@ body {
     background-color: #e0d8c8;
 }
 
+.container {
+    width: 100%;
+}
+
 img {
     width: 2rem;
 }
 
-.container {
-    width: 100%;
+button {
+    width: 9rem;
+    height: 3rem;
+    background-color: #C850C0;
+    color: #fff;
+    border-radius: 100vmax;    
+    border: none;
+    margin-top: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+button[data-type="inverted"] {
+    border: 1px solid #fff;
+    background-color: transparent;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%);
+    z-index: 2;
 }
 
 .form-wrapper {
@@ -103,11 +124,10 @@ img {
 
 .banner {
     position: absolute;
-    top: 20%; left: -5rem;
+    top: 15%; left: -50%;
     text-align: center;
     color: #fff;
-    width: 30rem;
-    z-index: 1;
+    transition: all 1s;
 }
 
 .banner h1 {
@@ -120,38 +140,37 @@ img {
 }
 
 .bg {
-    width: 40%;
+    width: 100%;
     height: 100%;
     position: absolute;
     top: 0; left: 0;
     background-color: #4158D0;
     background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    z-index: 3;
+    transition: width 1s;
 }
 
-.bg button {
-    position: absolute;
-    top: 60%; left: 50%;
-    transform: translate(-50%, -50%);
-    width: 9rem;
-    height: 3rem;
-    background-color: transparent;
-    border: 1px solid #fff;
-    border-radius: 100vmax;
-    letter-spacing: .1rem;
-    color: #fff;
-    cursor: pointer;
+.change .bg {
+    width: 40%;
+}
+.change .banner {
+    transform: translateX(175%);
+}
+.change .form {
+    left: 5rem;
 }
 
 .form {
     width: 60rem;
     height: 100%;
     position: absolute;
-    top: 0; left: 5rem;
+    top: 0; left: -15rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     padding: 5rem 0;
+    transition: all 1s;
 }
 
 .form h1 {
@@ -163,16 +182,6 @@ img {
     font-size: 1.2rem;
     margin-block: 1rem;
     color: #555;
-}
-
-.form button {
-    width: 9rem;
-    height: 3rem;
-    background-color: #C850C0;
-    color: #fff;
-    border-radius: 100vmax;    
-    border: none;
-    margin-top: 1rem;
 }
 
 .socials {
