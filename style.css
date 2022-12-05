@@ -84,93 +84,61 @@ body {
 }
 
 .container {
-    width: 100%;
-}
-
-img {
-    width: 2rem;
-}
-
-button {
-    width: 9rem;
-    height: 3rem;
-    background-color: #C850C0;
-    color: #fff;
-    border-radius: 100vmax;    
-    border: none;
-    margin-top: 1rem;
-    cursor: pointer;
-    text-transform: uppercase;
-}
-
-button[data-type="inverted"] {
-    border: 1px solid #fff;
-    background-color: transparent;
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%);
-    z-index: 2;
-}
-
-.form-wrapper {
     width: 50rem;
-    height: 95vh;
+    min-height: 38rem;
     position: relative;
     background-color: #fce7bf;
     border-radius: 2rem;
     overflow: hidden;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    display: flex;
+    align-items: center;
 }
 
 .banner {
-    position: absolute;
-    top: 15%; left: -50%;
-    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
     color: #fff;
+    z-index: 3;
+    position: absolute;
+    text-align: center;
+    transition: all 1s;
+    padding-bottom: 10rem;
+}
+
+.banner .signup-header {
+    transform: translateX(-50rem);
     transition: all 1s;
 }
 
-.banner h1 {
+.banner .signup-header h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
 }
 
-.banner p {
+.banner .signup-header p {
     font-size: 1.5rem;
 }
 
-.bg {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0; left: 0;
-    background-color: #4158D0;
-    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-    z-index: 3;
-    transition: width 1s;
-}
 
-.change .bg {
-    width: 40%;
-}
-.change .banner {
-    transform: translateX(175%);
-}
-.change .form {
-    left: 5rem;
+button[data-type="inverted"] {
+    border: 1px solid #fff;
+    background-color: transparent;
+    z-index: 2;
 }
 
 .form {
-    width: 60rem;
-    height: 100%;
-    position: absolute;
-    top: 0; left: -15rem;
+    transition: all 1s;
+    padding: 5rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
-    padding: 5rem 0;
-    transition: all 1s;
 }
 
 .form h1 {
@@ -194,6 +162,7 @@ button[data-type="inverted"] {
 }
 
 .input-field {
+    padding-block: .5rem;
     position: relative;
 }
 
@@ -203,10 +172,41 @@ button[data-type="inverted"] {
     padding: 0 0 0 2.5rem;
     border: none;
     border-radius: 12px;
+
 }
 
 .input-field .input-icons {
     position: absolute;
-    top: .5rem; left: .2rem;
+    top: 1rem; left: .2rem;
     width: 1.8rem;
+}
+
+button {
+    width: 9rem;
+    height: 3rem;
+    background-color: #C850C0;
+    color: #fff;
+    border-radius: 100vmax;    
+    border: none;
+    margin-top: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.change .banner {
+    width: 40%;
+}
+.change .form {
+    padding-left: 25rem;
+}
+.change .signup-header {
+    transform: translateX(0);
+}
+
+
+@media (max-width: 50rem) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
 }
