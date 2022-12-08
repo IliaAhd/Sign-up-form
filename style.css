@@ -82,9 +82,8 @@ body {
     font-family: 'Nerko One', cursive;
     letter-spacing: .1rem;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center;
     background-color: #e0d8c8;
 }
 
@@ -211,17 +210,15 @@ button {
 
 @media (max-width: 50rem) {
     .container {
-        max-width: 20rem;
+        max-width: 90vw;
         min-height: 30rem;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-
     .form {
         padding: 0;
     }
-
     .banner {
         position: absolute;
         top: 0; left: 0;
@@ -229,7 +226,6 @@ button {
         height: 100%;
         padding: 0;
     }
-
     .change .form {
         padding-left: 0;
     }
