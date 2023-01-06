@@ -206,7 +206,12 @@ button {
 .change .signup-header {
     transform: translateX(0);
 }
-
+.change .button[data-type="inverted"] span {
+    display: none;
+}
+.change .button[data-type="inverted"]::before {
+    content: "Close";
+}
 
 @media (max-width: 50rem) {
     .container {
